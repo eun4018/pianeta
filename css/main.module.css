@@ -194,21 +194,12 @@ body.contact-on .hero-section {
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
 }
-body.travel-on .hero-section {
-  transform: rotateX(-10deg);
-  -webkit-transition-delay: 0ms;
-  transition-delay: 0ms;
-}
 body.wildlife-on .hero-section {
   transform: rotateX(-10deg);
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
 }
-body.nature-on .hero-section {
-  transform: rotateX(-10deg);
-  -webkit-transition-delay: 0ms;
-  transition-delay: 0ms;
-}
+
 .about-text {
   position: absolute;
   font-size: 17px;
@@ -470,10 +461,8 @@ body.wildlife-on .port-section {
   -webkit-transition-delay: 400ms;
   transition-delay: 400ms;
 }
-body.wildlife-on.career-on .port-section > #myModal {
-  top: 0;
-  -webkit-transition-delay: 400ms;
-  transition-delay: 400ms;
+body.wildlife-on.project-on .port-section {
+  overflow-y: hidden;
 }
 body.nature-on .nature-section {
   top: 0;
@@ -502,7 +491,7 @@ body.nature-on .nature-section {
 .travel-section p,
 .port-section p,
 .nature-section p {
-  font-size: 14px;
+  font-size: 1.215rem;
   line-height: 1.7;
   letter-spacing: 1px;
 }
@@ -513,4 +502,29 @@ body.nature-on .nature-section {
   line-height: 1.3;
   font-weight: 700;
   color: #866baf;
+}
+.port-section .project {
+  cursor: pointer;
+  width: 100%;
+  /* background: Red; */
+  position: relative;
+}
+.port-section .project p {
+  font-family: "Ownglyph_ryuttung-Rg";
+  text-align: center;
+  margin-top: 10px;
+}
+
+.port-section #myModal {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background: skyblue;
+  transition: all 0.5s;
+}
+.port-section #myModal.modal-on {
+  visibility: visible;
+  opacity: 1;
 }
