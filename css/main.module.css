@@ -509,6 +509,14 @@ body.nature-on .nature-section {
   /* background: Red; */
   position: relative;
 }
+.port-section .project:after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
 .port-section .project p {
   font-family: "Ownglyph_ryuttung-Rg";
   text-align: center;
@@ -527,4 +535,7 @@ body.nature-on .nature-section {
 .port-section #myModal.modal-on {
   visibility: visible;
   opacity: 1;
+}
+.port-section #myModal.modal-on p {
+  color: red;
 }

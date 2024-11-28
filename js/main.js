@@ -88,8 +88,8 @@ function toggleBodyClass(buttonSelector, className, isAdd) {
     });
   });
 }
-function toggleModal(project, className, isAdd) {
-  const projects = document.querySelectorAll(".project");
+function toggleModal(divselector, className, isAdd) {
+  const projects = document.querySelectorAll(divselector);
   const Modals = document.querySelector("#myModal");
   const CloseBtn = Modals.querySelector(".close");
   projects.forEach((project) => {
@@ -99,11 +99,11 @@ function toggleModal(project, className, isAdd) {
         // Modals.style.display = "block";
         Modals.classList.add("modal-on");
       } else {
-        CloseBtn.addEventListener("click", function () {
-          document.body.classList.remove(className);
-          // Modals.style.display = "none";
-          Modals.classList.remove("modal-on");
-        });
+        // CloseBtn.addEventListener("click", function () {
+        //   document.body.classList.remove(className);
+        //   // Modals.style.display = "none";
+        //   Modals.classList.remove("modal-on");
+        // });
       }
     });
   });

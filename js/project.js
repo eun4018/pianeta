@@ -1,4 +1,4 @@
-const data = {
+const project = {
   data: [
     {
       id: "job01",
@@ -37,5 +37,4 @@ const data = {
     },
   ],
 };
-
-export default data;
+export default project;
