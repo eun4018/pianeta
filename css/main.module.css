@@ -194,7 +194,12 @@ body.contact-on .hero-section {
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
 }
-body.wildlife-on .hero-section {
+body.port-on .hero-section {
+  transform: rotateX(-10deg);
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+body.practice-on .hero-section {
   transform: rotateX(-10deg);
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
@@ -408,9 +413,8 @@ body.contact-on .contact-section {
   }
 }
 
-.travel-section,
-.port-section,
-.nature-section {
+.practice-section,
+.port-section {
   position: fixed;
   top: 100%;
   left: 0;
@@ -426,9 +430,8 @@ body.contact-on .contact-section {
   z-index: 10;
 }
 
-.travel-close,
-.wildlife-close,
-.nature-close {
+.practice-close,
+.port-close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -446,32 +449,30 @@ body.contact-on .contact-section {
   z-index: 11;
 }
 
-.travel-close:hover,
-.wildlife-close:hover,
-.nature-close:hover {
+.practice-close:hover,
+.port-close:hover {
   transform: rotate(90deg);
 }
-body.travel-on .travel-section {
+body.practice-on .practice-section {
   top: 0;
   -webkit-transition-delay: 400ms;
   transition-delay: 400ms;
 }
-body.wildlife-on .port-section {
+body.port-on .port-section {
   top: 0;
   -webkit-transition-delay: 400ms;
   transition-delay: 400ms;
 }
-body.wildlife-on.project-on .port-section {
+body.port-on.project-on,
+body.practice-on.project-on {
+  perspective: none !important;
+}
+body.port-on.project-on .port-section {
   overflow-y: hidden;
 }
-body.nature-on .nature-section {
-  top: 0;
-  -webkit-transition-delay: 400ms;
-  transition-delay: 400ms;
-}
-.travel-section img,
-.port-section img,
-.nature-section img {
+
+.practice-section img,
+.port-section img {
   margin-top: 30px;
   width: 100%;
   height: auto;
@@ -479,63 +480,115 @@ body.nature-on .nature-section {
   border-radius: 4px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
-.travel-section h3,
-.port-section h3,
-.nature-section h3 {
+.practice-section h3,
+.port-section h3 {
   font-size: 44px;
   line-height: 1.3;
   font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
 }
-.travel-section p,
-.port-section p,
-.nature-section p {
+.practice-section p,
+.port-section p {
   font-size: 1.215rem;
   line-height: 1.7;
   letter-spacing: 1px;
 }
-.travel-section p span,
-.port-section p span,
-.nature-section p span {
+.practice-section p span,
+.port-section p span {
   font-size: 20px;
   line-height: 1.3;
   font-weight: 700;
   color: #866baf;
 }
-.port-section .project {
+.port-section .project .img-box,
+.practice-section .project .img-box {
   cursor: pointer;
   width: 100%;
-  /* background: Red; */
   position: relative;
 }
-.port-section .project:after {
+.port-section .project .img-box:after,
+.practice-section .project .img-box:after {
   position: absolute;
-  top: 0;
+  bottom: 0;
   content: "";
   width: 100%;
-  height: 100%;
-  background: transparent;
+  height: 0;
+  z-index: 2;
+  transition: all 0.3s;
 }
-.port-section .project p {
+.port-section .project .img-box:hover:after,
+.practice-section .project .img-box:hover:after {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+}
+.port-section .project .img-box .info,
+.practice-section .project .img-box .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 20px 0 0 0;
+  z-index: 3;
+  line-height: 1.2;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.port-section .project .img-box:hover .info,
+.practice-section .project .img-box:hover .info {
+  opacity: 1;
+}
+.port-section .project .img-box .info span,
+.practice-section .project .img-box .info span {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  /* display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/more.png);
+  background-size: cover;
+  font-size: 0;
+  text-align: center;
+  margin: 0 auto 10px auto; */
+}
+.port-section .project .img-box .info:before,
+.practice-section .project .img-box .info:before {
+  content: "";
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/more.png);
+  background-size: cover;
+  color: #000;
+}
+.port-section .project p,
+.practice-section .project p {
   font-family: "Ownglyph_ryuttung-Rg";
   text-align: center;
   margin-top: 10px;
 }
 
-.port-section #myModal {
+#myModal {
   display: block;
   width: 100%;
   height: 100%;
   opacity: 0;
   visibility: hidden;
   background: skyblue;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
-.port-section #myModal.modal-on {
+#myModal.modal-on {
   visibility: visible;
   opacity: 1;
 }
-.port-section #myModal.modal-on p {
+#myModal.modal-on p {
   color: red;
 }

@@ -88,28 +88,28 @@ function toggleBodyClass(buttonSelector, className, isAdd) {
     });
   });
 }
-function toggleModal(divselector, className, isAdd) {
-  const projects = document.querySelectorAll(divselector);
-  const Modals = document.querySelector("#myModal");
-  const CloseBtn = Modals.querySelector(".close");
-  projects.forEach((project) => {
-    project.addEventListener("click", function () {
-      if (isAdd) {
-        document.body.classList.add(className);
-        // Modals.style.display = "block";
-        Modals.classList.add("modal-on");
-      } else {
-        // CloseBtn.addEventListener("click", function () {
-        //   document.body.classList.remove(className);
-        //   // Modals.style.display = "none";
-        //   Modals.classList.remove("modal-on");
-        // });
-      }
-    });
-  });
-}
-toggleModal(".project", "project-on", true);
-toggleModal(".close", "project-on", false);
+// function toggleModal(divselector, className, isAdd) {
+//   const projects = document.querySelectorAll(divselector);
+//   const Modals = document.querySelector("#myModal");
+//   const CloseBtn = Modals.querySelector(".close");
+//   projects.forEach((project) => {
+//     project.addEventListener("click", function () {
+//       if (isAdd) {
+//         document.body.classList.add(className);
+//         // Modals.style.display = "block";
+//         Modals.classList.add("modal-on");
+//       } else {
+//         // CloseBtn.addEventListener("click", function () {
+//         //   document.body.classList.remove(className);
+//         //   // Modals.style.display = "none";
+//         //   Modals.classList.remove("modal-on");
+//         // });
+//       }
+//     });
+//   });
+// }
+// toggleModal(".project", "project-on", true);
+// toggleModal(".close", "project-on", false);
 
 // About page
 toggleBodyClass(".about-text", "about-on", true);
@@ -119,6 +119,10 @@ toggleBodyClass(".about-close", "about-on", false);
 toggleBodyClass(".contact-text", "contact-on", true);
 toggleBodyClass(".contact-close", "contact-on", false);
 
-// Wildlife portfolio page
-toggleBodyClass(".wildlife", "wildlife-on", true);
-toggleBodyClass(".wildlife-close", "wildlife-on", false);
+// practice page
+toggleBodyClass(".practice", "practice-on", true);
+toggleBodyClass(".practice-close", "practice-on", false);
+
+// portfolio page
+toggleBodyClass(".portfolio", "port-on", true);
+toggleBodyClass(".port-close", "port-on", false);
