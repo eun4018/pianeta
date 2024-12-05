@@ -521,7 +521,9 @@ body.port-on.project-on .port-section {
   transition: all 0.3s;
 }
 .port-section .project .img-box:hover:after,
-.practice-section .project .img-box:hover:after {
+.practice-section .project .img-box:hover:after,
+.port-section .project .img-box:active:after,
+.practice-section .project .img-box:active:after {
   background: rgba(0, 0, 0, 0.7);
   height: 100%;
 }
@@ -779,6 +781,6 @@ body.port-on.project-on .port-section {
     margin-bottom: 10px;
   }
   #myModal.modal-on .img_box {
-    /* height: calc(100vh - 260px); */
+    height: calc(100vh - 260px);
   }
 }

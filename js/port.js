@@ -13,7 +13,7 @@ const importData = () => {
   project.data.map((data) => {
     const list = document.querySelector(".port-section .container .row");
     list.innerHTML += `<div class="project col-md-6 col-lg-4">
-    <div class="img-box" data-list="${data.id}"><img src="${data.image}" data-list="${data.id}"/>
+    <div class="img-box" data-list="${data.id}"><img src="${data.image}"/>
     <p class="info" data-list="${data.id}">${data.info}<span class="blind">자세히보기</span></p></div>
     <p>${data.name}</p></div>`;
   });
