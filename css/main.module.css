@@ -747,9 +747,6 @@ body.port-on.project-on .port-section {
   width: 100%;
 }
 @media (max-width: 1200px) {
-  #myModal.modal-on .img_box {
-    height: calc(400px + 60px);
-  }
   #myModal .modal-content {
     max-width: 90vw;
   }
@@ -782,6 +779,6 @@ body.port-on.project-on .port-section {
     margin-bottom: 10px;
   }
   #myModal.modal-on .img_box {
-    height: calc(100vh - 170px);
+    height: calc(100vh - 260px);
   }
 }
