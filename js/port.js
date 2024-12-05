@@ -6,9 +6,12 @@ const importData = () => {
   project.data01.map((data01) => {
     const list01 = document.querySelector(".practice-section .container .row");
     list01.innerHTML += `<div class="project col-md-6 col-lg-4">
-    <div class="img-box" data-list="${data01.number}"><img src="${data01.image}"/>
-      <p class="info" data-list="${data01.number}">${data01.info}<span class="blind">자세히보기</span></p></div>
-    <p>${data01.name}</p></div>`;
+          <div class="img-box" data-list="${data01.number}">
+            <img src="${data01.image}" data-list="${data01.number}"/>
+            <p class="info" data-list="${data01.number}">${data01.info}<span class="blind">자세히보기</span></p>
+          </div>
+          <p>${data01.name}</p>
+    </div>`;
   });
   project.data.map((data) => {
     const list = document.querySelector(".port-section .container .row");

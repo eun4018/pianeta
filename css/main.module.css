@@ -520,18 +520,14 @@ body.port-on.project-on .port-section {
   z-index: 2;
   transition: all 300ms;
 }
-/* .port-section .project .img-box:hover:after,
-.practice-section .project .img-box:hover:after {
+.port-section .project .img-box:hover:after,
+.practice-section .project .img-box:hover:after,
+.port-section .project .img-box:active:after,
+.practice-section .project .img-box:active:after {
   background: rgba(0, 0, 0, 0.7);
   height: 100%;
-} */
-@media (hover: hover) and (potiner: fine) {
-  .port-section .project .img-box:hover:after,
-  .practice-section .project .img-box:hover:after {
-    background: rgba(0, 0, 0, 0.7);
-    height: 100%;
-  }
 }
+
 .port-section .project .img-box .info,
 .practice-section .project .img-box .info {
   position: absolute;
