@@ -26,7 +26,7 @@ const importModal = () => {
     const modalbox = document.querySelector("#myModal .modal-content");
     div.addEventListener("click", function (e) {
       let value = e.target.dataset.list;
-      console.log(value);
+      console.log(div.childNodes);
       document.body.classList.add("project-on");
       Modals.classList.add("modal-on");
       modals.career01.map((career01) => {
