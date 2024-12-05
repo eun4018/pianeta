@@ -1,10 +1,3 @@
-/* Please ❤ this if you like it! */
-
-/* ======================================== * 
-		        BEST VIEWED FULLSCREEN
-   https://codepen.io/ig_design/full/JxbVRq
- * ======================================== */
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 
 @font-face {
@@ -49,7 +42,20 @@ a:hover {
   color: #c4c3ca;
   background-color: #000;
 }
-
+:before,
+:after {
+  position: absolute;
+  content: "";
+}
+.blind {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 /* #Cursor
  ================================================== */
 
@@ -163,8 +169,8 @@ a:hover {
   padding-bottom: 35px;
 }
 .hero-section p span:before {
-  position: absolute;
-  content: "";
+  /* position: absolute;
+  content: ""; */
   bottom: 10px;
   left: 50%;
   height: 30px;
@@ -223,8 +229,6 @@ body.practice-on .hero-section {
   transition: all 200ms linear;
 }
 .about-text:before {
-  position: absolute;
-  content: "";
   top: 50%;
   left: -25px;
   height: 30px;
@@ -324,8 +328,6 @@ body.about-on .about-section {
   transition: all 200ms linear;
 }
 .contact-text:before {
-  position: absolute;
-  content: "";
   top: 50%;
   left: -25px;
   height: 30px;
@@ -493,6 +495,7 @@ body.port-on.project-on .port-section {
   font-size: 1.215rem;
   line-height: 1.7;
   letter-spacing: 1px;
+  font-family: "Ownglyph_ryuttung-Rg";
 }
 .practice-section p span,
 .port-section p span {
@@ -538,28 +541,9 @@ body.port-on.project-on .port-section {
 .practice-section .project .img-box:hover .info {
   opacity: 1;
 }
-.port-section .project .img-box .info span,
-.practice-section .project .img-box .info span {
-  overflow: hidden;
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  clip-path: polygon(0 0, 0 0, 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  /* display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url(../img/more.png);
-  background-size: cover;
-  font-size: 0;
-  text-align: center;
-  margin: 0 auto 10px auto; */
-}
+
 .port-section .project .img-box .info:before,
 .practice-section .project .img-box .info:before {
-  content: "";
-  position: absolute;
   top: -46px;
   left: 50%;
   transform: translateX(-50%);
@@ -582,13 +566,222 @@ body.port-on.project-on .port-section {
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  background: skyblue;
+  background-color: rgba(0, 0, 0, 0.8);
   transition: all 0.3s;
 }
 #myModal.modal-on {
   visibility: visible;
   opacity: 1;
 }
-#myModal.modal-on p {
-  color: red;
+#myModal.modal-on .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 74vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+#myModal.modal-on .modal-content .close {
+  position: absolute;
+  top: -17px;
+  right: -12px;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  background: #f7f7f7;
+  border-radius: 50%;
+  opacity: 1;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+#myModal .modal-content .close:before,
+#myModal .modal-content .close:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  background: #333;
+  border-radius: 1rem;
+}
+#myModal .modal-content .close:before {
+  width: 22px;
+  height: 2px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+#myModal .modal-content .close:after {
+  width: 2px;
+  height: 22px;
+  transform: translate(-50%, -50%) rotate(132deg);
+}
+#myModal.modal-on .tit {
+  font-family: "Ownglyph_ryuttung-Rg";
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 98%;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+#myModal.modal-on .tit p {
+  margin: 0;
+  color: #1f2029;
+  font-size: 1.215rem;
+}
+#myModal.modal-on .tit p:not(.txt) {
+  background: #3b7cca;
+  display: inline-block;
+  padding: 0 14px 0 16px;
+  margin: 0 0 10px 11px;
+  border-radius: 9px;
+  color: #fff;
+  position: relative;
+}
+#myModal.modal-on .tit p:not(.txt):before {
+  content: "";
+  display: block;
+  height: 27px;
+  width: 27px;
+  position: absolute;
+  left: -8px;
+  top: 2px;
+  border-radius: 9px;
+  transform: rotate(45.1deg);
+  background: #3b7cca;
+  z-index: -1;
+}
+#myModal.modal-on .tit p:not(.txt):after {
+  content: "";
+  display: block;
+  background: #fff;
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  left: 0px;
+  top: 11px;
+  border-radius: 100%;
+}
+#myModal.modal-on .tit .txt {
+  color: #866baf;
+}
+#myModal.modal-on .tit .right_tit {
+  margin-bottom: 0;
+  padding: 0;
+}
+#myModal.modal-on .tit .right_tit li {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  min-width: 60px;
+}
+#myModal.modal-on .tit .right_tit li:before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-color: #866baf;
+  transition: all 0.5s ease-out;
+}
+#myModal.modal-on .tit .right_tit li:hover:before {
+  opacity: 0;
+}
+#myModal.modal-on .tit .right_tit li a {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  border: 1px solid #866baf;
+  transition: all 0.5s;
+}
+#myModal.modal-on .tit .right_tit li a:hover {
+  color: #866baf;
+}
+#myModal.modal-on .tit .right_tit li a:before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+#myModal.modal-on .tit .right_tit li a:hover:before {
+  opacity: 0;
+}
+#myModal.modal-on .img_box {
+  overflow-y: auto;
+  height: calc(100vh - 450px);
+}
+/*scrollbar-*/
+#myModal.modal-on .img_box::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+}
+#myModal.modal-on .img_box::-webkit-scrollbar-thumb {
+  background-color: rgba(186, 186, 192, 0.5);
+  border-radius: 16px;
+}
+#myModal.modal-on .img_box::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+/* #myModal.modal-on .img_box::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(160, 160, 165, 0.5);
+} */
+#myModal.modal-on .img_box::-webkit-scrollbar-button {
+  display: none;
+}
+#myModal.modal-on .img_box img {
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  #myModal.modal-on .img_box {
+    height: calc(400px + 60px);
+  }
+  #myModal .modal-content {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 720px) {
+  #myModal.modal-on .modal-content {
+    max-width: 95vw;
+  }
+  #myModal.modal-on .modal-content .modals {
+    padding-top: 20px;
+  }
+  #myModal.modal-on .modal-content .close {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+  }
+  #myModal.modal-on .tit {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  #myModal.modal-on .tit p {
+    text-align: center;
+  }
+  #myModal.modal-on .tit p:not(.txt) {
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #myModal.modal-on .tit .txt {
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  #myModal.modal-on .img_box {
+    height: calc(100vh - 170px);
+  }
 }

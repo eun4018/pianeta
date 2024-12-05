@@ -58,22 +58,28 @@ const project = {
   ],
   data01: [
     {
+      number: "prac04",
+      name: "#영화정보사이트_react",
+      info: "react,API 실습",
+      image: "img/prac_mockup03.png",
+    },
+    {
       number: "prac03",
-      name: "제주항공",
-      info: "디자인 및 퍼블리싱 실습",
-      image: "	https://eun4018.github.io/stardust/portfolio/img/mockup02.png",
+      name: "#javascript_실습",
+      info: "javascript 실습",
+      image: "img/prac_mockup02.png",
     },
     {
       number: "prac02",
-      name: "제주항공",
-      info: "디자인 및 퍼블리싱 실습",
-      image: "	https://eun4018.github.io/stardust/portfolio/img/mockup02.png",
+      name: "#포트폴리오(JQuery)",
+      info: "fullpage 및<br/>부트스트랩 플러그인사용",
+      image: "img/prac_mockup01.png",
     },
     {
       number: "prac01",
-      name: "제주항공",
+      name: "#제주항공(JQuery)",
       info: "디자인 및 퍼블리싱 실습",
-      image: "	https://eun4018.github.io/stardust/portfolio/img/mockup02.png",
+      image: "https://eun4018.github.io/stardust/portfolio/img/mockup02.png",
     },
   ],
 };
