@@ -7,7 +7,7 @@ const importData = () => {
     const list01 = document.querySelector(".practice-section .container .row");
     list01.innerHTML += `<div class="project col-md-6 col-lg-4">
           <div class="img-box" data-list="${data01.number}">
-            <img src="${data01.image}" data-list="${data01.number}"/>
+            <img src="${data01.image}"/>
             <p class="info" data-list="${data01.number}">${data01.info}<span class="blind">자세히보기</span></p>
           </div>
           <p>${data01.name}</p>
@@ -28,8 +28,8 @@ const importModal = () => {
     const Modals = document.querySelector("#myModal");
     const modalbox = document.querySelector("#myModal .modal-content");
     div.addEventListener("click", function (e) {
-      let value = e.target.dataset.list;
-      console.log(div.childNodes);
+      let value = e.currentTarget.dataset.list;
+      console.log(e.currentTarget);
       document.body.classList.add("project-on");
       Modals.classList.add("modal-on");
       modals.career01.map((career01) => {
