@@ -307,10 +307,20 @@ body.about-on .about-section {
 .about-section ul,
 .about-section p {
   margin-bottom: 0;
-}
-.about-section ul li {
   font-family: "Ownglyph_ryuttung-Rg";
   font-size: 1.215rem;
+}
+
+.about-section ul + p {
+  padding-left: 20px;
+  color: #866baf;
+  margin-top: 0.25rem;
+}
+.about-section ul li > p {
+  display: flex;
+}
+.about-section ul li > p span:first-child {
+  padding-right: 0.9rem;
 }
 .contact-text {
   position: absolute;
@@ -422,7 +432,6 @@ body.contact-on .contact-section {
   position: fixed;
   top: 100%;
   left: 0;
-  /* padding: 6.5vh 0; */
   width: 100%;
   height: 100vh;
   display: block;
@@ -766,6 +775,9 @@ body.port-on.project-on .port-section {
   }
 }
 @media (max-width: 720px) {
+  .about-section ul li > p {
+    flex-direction: column;
+  }
   #myModal.modal-on .modal-content {
     max-width: 95vw;
   }
@@ -800,7 +812,8 @@ body.port-on.project-on .port-section {
   .about-section h3 {
     font-size: 1.125rem;
   }
-  .about-section ul li {
+  .about-section ul li,
+  .about-section ul + p {
     font-size: 1.025rem;
   }
 }
