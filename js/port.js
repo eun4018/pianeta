@@ -1,6 +1,7 @@
 // import data from "./data.json" with { type: "json" };
 import project from "./project.js";
 import modals from "./modalList.js";
+import about from "./aboutMe.js";
 
 const importData = () => {
   project.data01.map((data01) => {
@@ -108,3 +109,22 @@ const importModal = () => {
 };
 importData(project);
 importModal(modals);
+
+const About = () => {
+  about.intro.map((intro) => {
+    const sec_parent = document.querySelector(".about-section .about ul");
+    sec_parent.innerHTML += `<li>${intro.txt}</li>`;
+  });
+  const intro_txt = document.createElement("p");
+  document.querySelector(".about-section .about").append(intro_txt);
+  intro_txt.innerHTML += `찢어주겨도 모자른 새끼들`;
+  about.work.map((work) => {
+    const sec_parent = document.querySelector(".about-section .works ul");
+    sec_parent.innerHTML += `<li>${work.txt}</li>`;
+  });
+  about.skill.map((work) => {
+    const sec_parent = document.querySelector(".about-section .skills ul");
+    sec_parent.innerHTML += `<li>${work.txt}</li>`;
+  });
+};
+About(about);

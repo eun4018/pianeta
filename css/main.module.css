@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
-
 @font-face {
   font-family: "Ownglyph_ryuttung-Rg";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryuttung-Rg.woff2")
@@ -295,21 +293,25 @@ body.about-on .about-section {
   z-index: 1;
 }
 .about-section img {
-  width: 100px;
-  height: 100px;
+  width: min(160px, 30%);
+  height: auto;
   border-radius: 4px;
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.about-section p span {
-  font-family: "Dancing Script", cursive;
-  letter-spacing: 1px;
-  color: #866baf;
-  font-size: 25px;
-  font-weight: 400;
+.about-section h3 {
+  padding-left: 15px;
+  border-left: 2px solid #3b7cca;
 }
-
+.about-section ul,
+.about-section p {
+  margin-bottom: 0;
+}
+.about-section ul li {
+  font-family: "Ownglyph_ryuttung-Rg";
+  font-size: 1.215rem;
+}
 .contact-text {
   position: absolute;
   font-size: 17px;
@@ -527,14 +529,14 @@ body.port-on.project-on .port-section {
   top: 0;
   width: 100%;
   height: 100%;
-  /* background: Red; */
+  z-index: 1;
 }
 .port-section .project .img-box:hover:after,
 .practice-section .project .img-box:hover:after,
 .port-section .project .img-box:active:after,
 .practice-section .project .img-box:active:after {
   background: rgba(0, 0, 0, 0.7);
-  height: 0;
+  height: 100%;
 }
 
 .port-section .project .img-box .info,
@@ -792,5 +794,13 @@ body.port-on.project-on .port-section {
   }
   #myModal.modal-on .img_box {
     height: calc(100vh - 260px);
+  }
+}
+@media (max-width: 480px) {
+  .about-section h3 {
+    font-size: 1.125rem;
+  }
+  .about-section ul li {
+    font-size: 1.025rem;
   }
 }
