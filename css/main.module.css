@@ -778,6 +778,9 @@ body.port-on.project-on .port-section {
   .about-section ul li > p {
     flex-direction: column;
   }
+  .about-section {
+    overflow-y: auto;
+  }
   #myModal.modal-on .modal-content {
     max-width: 95vw;
   }
@@ -809,10 +812,14 @@ body.port-on.project-on .port-section {
   }
 }
 @media (max-width: 480px) {
+  .about-section {
+    overflow-y: auto;
+  }
   .about-section h3 {
     font-size: 1.125rem;
   }
   .about-section ul li,
+  .about-section ul li > p,
   .about-section ul + p {
     font-size: 1.025rem;
   }

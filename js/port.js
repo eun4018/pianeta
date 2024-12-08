@@ -120,11 +120,11 @@ const About = () => {
   intro_txt.innerHTML += `🌻 상단의 경험 이외에도 자신의 능력을 힘껏 불태우고 모자른 부분은 노력으로 채워가는 퍼블리셔`;
   about.work.map((work) => {
     const sec_parent = document.querySelector(".about-section .works ul");
-    sec_parent.innerHTML += `<li><p><span>${work.date}</span><span>${work.name} / ${work.txt}</span></p></li>`;
+    sec_parent.innerHTML += `<li><p><span>${work.date}</span><span>${work.name} - ${work.txt}</span></p></li>`;
   });
-  about.skill.map((work) => {
+  about.skill.map((skill) => {
     const sec_parent = document.querySelector(".about-section .skills ul");
-    sec_parent.innerHTML += `<li>${work.txt}</li>`;
+    sec_parent.innerHTML += `<li><p><span>[ ${skill.name} ]</span><span>${skill.txt}</span></p></li>`;
   });
 };
 About(about);
