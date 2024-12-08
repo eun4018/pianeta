@@ -253,6 +253,7 @@ body.practice-on .hero-section {
   display: block;
   overflow: hidden;
   height: 100vh;
+  height: var(--app-height);
   background-color: rgba(31, 32, 41, 1);
   transform: translateX(-100%);
   -webkit-transition: all 300ms linear;
@@ -812,9 +813,6 @@ body.port-on.project-on .port-section {
   }
 }
 @media (max-width: 480px) {
-  .about-section {
-    overflow-y: auto;
-  }
   .about-section h3 {
     font-size: 1.125rem;
   }

@@ -128,3 +128,14 @@ const About = () => {
   });
 };
 About(about);
+
+function height() {
+  window.addEventListener("DOMContentLoaded", function (ev) {
+    const { innerHeight } = window;
+    document.documentElement.style.setProperty(
+      "--app-height",
+      `${innerHeight}px`
+    );
+  });
+}
+height();
