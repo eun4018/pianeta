@@ -17,10 +17,8 @@ const modals = {
       link: "",
       link01: "",
       link02: "",
-      image_pc:
-        "https://eun4018.github.io/stardust/portfolio/img/galaxy_more_pc.png",
-      image_mo:
-        "https://eun4018.github.io/stardust/portfolio/img/galaxy_more_mob.png",
+      image_pc: "img/galaxy_more_pc.png",
+      image_mo: "img/galaxy_more_mob.png",
     },
     {
       id: "job03",
@@ -29,8 +27,7 @@ const modals = {
       link: "",
       link01: "",
       link02: "",
-      image_pc:
-        "https://eun4018.github.io/stardust/portfolio/img/lguplus_more_pc.png",
+      image_pc: "img/lguplus_more_pc.png",
       image_mo:
         "https://eun4018.github.io/stardust/portfolio/img/lguplus_more_mob.png",
     },
@@ -42,10 +39,8 @@ const modals = {
       link01:
         "https://eun4018.github.io/stardust/MYDATA/html_guide_md/RAN/RAN_001_0002_230313.html",
       link02: "https://github.com/eun4018/stardust/tree/main/MYDATA",
-      image_pc:
-        "https://eun4018.github.io/stardust/portfolio/img/hanacard_more_pc.png",
-      image_mo:
-        "https://eun4018.github.io/stardust/portfolio/img/hanacard_more_mob.png",
+      image_pc: "img/hanacard_more_pc.png",
+      image_mo: "img/hanacard_more_mob.png",
     },
     {
       id: "job05",
@@ -55,8 +50,7 @@ const modals = {
       link01:
         "https://eun4018.github.io/stardust/seoul/block/sub-block/sub-block.html",
       link02: "https://github.com/eun4018/stardust/tree/main/seoul/block",
-      image_pc:
-        "https://eun4018.github.io/stardust/portfolio/img/block_more_pc.png",
+      image_pc: "img/block_more_pc.png",
       image_mo:
         "https://eun4018.github.io/stardust/portfolio/img/block_more_mob.png",
     },
@@ -93,10 +87,8 @@ const modals = {
       link01:
         "https://eun4018.github.io/stardust/mworld/WEB-INF/views/business/business1.html",
       link02: "https://github.com/eun4018/stardust/tree/main/mworld",
-      image_pc:
-        "https://eun4018.github.io/stardust/portfolio/img/mugu_more_pc.png",
-      image_mo:
-        "https://eun4018.github.io/stardust/portfolio/img/mugu_more_mob.png",
+      image_pc: "img/mugu_more_pc.png",
+      image_mo: "img/mugu_more_mob.png",
     },
     {
       id: "job09",
@@ -105,10 +97,8 @@ const modals = {
       link: "https://eun4018.github.io/stardust/lotus/main/index.html",
       link01: "https://eun4018.github.io/stardust/lotus/menu1/page1.html",
       link02: "https://github.com/eun4018/stardust/tree/main/lotus",
-      image_pc:
-        "https://eun4018.github.io/stardust/portfolio/img/lotu_more_pc.png",
-      image_mo:
-        "https://eun4018.github.io/stardust/portfolio/img/lotu_more_mob.png",
+      image_pc: "img/lotu_more_pc.png",
+      image_mo: "img/lotu_more_mob.png",
     },
   ],
   career01: [
@@ -119,8 +109,8 @@ const modals = {
       link: "https://eun4018.github.io/react-house/",
       link01: "",
       link02: "https://github.com/eun4018/react-house",
-      image_pc: "img/prac_mockup03_pc.png",
-      image_mo: "img/prac_mockup03_mob.png",
+      image_pc: "img/prac_mockup03_pc-min.png",
+      image_mo: "img/prac_mockup03_mob-min.png",
     },
     {
       number: "prac03",
@@ -150,8 +140,7 @@ const modals = {
       link: "https://eun4018.github.io/stardust/jejuair/index.html",
       link01: "",
       link02: "https://github.com/eun4018/stardust/tree/main/jejuair",
-      image_pc:
-        "https://eun4018.github.io/stardust/portfolio/img/jeju_more_pc.png",
+      image_pc: "img/jeju_more_pc.png",
       image_mo:
         "https://eun4018.github.io/stardust/portfolio/img/jeju_more_mob.png",
     },
