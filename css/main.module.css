@@ -842,7 +842,7 @@ body.port-on.project-on .port-section {
     max-width: 90vw;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 800px) {
   .about-section ul li > p {
     flex-direction: column;
   }
