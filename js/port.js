@@ -113,10 +113,10 @@ importData(project);
 importModal(modals);
 
 const About = () => {
-  about.work.map((work) => {
-    const sec_parent = document.querySelector(".about-section .works ul");
-    sec_parent.innerHTML += `<li><p><span>${work.date}</span><span>${work.name} - ${work.txt}</span></p></li>`;
-  });
+  // about.work.map((work) => {
+  //   const sec_parent = document.querySelector(".about-section .works ul");
+  //   sec_parent.innerHTML += `<li><p><span>${work.date}</span><span>${work.name} - ${work.txt}</span></p></li>`;
+  // });
   about.skill.map((skill) => {
     const sec_parent = document.querySelector(".about-section .skills ul");
     sec_parent.innerHTML += `<li><p><span>[ ${skill.name} ]</span><span>${skill.txt}</span></p></li>`;
@@ -134,29 +134,3 @@ function height() {
   });
 }
 height();
-// function touch() {
-//   document.documentElement.addEventListener(
-//     "touchstart",
-//     function (event) {
-//       if (event.touches.length > 1) {
-//         event.preventDefault();
-//       }
-//     },
-//     false
-//   );
-
-//   let lastTouchEnd = 0;
-
-//   document.documentElement.addEventListener(
-//     "touchend",
-//     function (event) {
-//       let now = new Date().getTime();
-//       if (now - lastTouchEnd <= 300) {
-//         event.preventDefault();
-//       }
-//       lastTouchEnd = now;
-//     },
-//     false
-//   );
-// }
-// touch();
