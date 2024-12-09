@@ -254,7 +254,7 @@ body.practice-on .hero-section {
   overflow: hidden;
   height: 100vh;
   height: var(--app-height);
-  min-height: -webkit-fill-available;
+  /* min-height: -webkit-fill-available; */
   background-color: rgba(31, 32, 41, 1);
   transform: translateX(-100%);
   -webkit-transition: all 300ms linear;
@@ -437,7 +437,7 @@ body.contact-on .contact-section {
   width: 100%;
   height: 100vh;
   height: var(--app-height);
-  min-height: -webkit-fill-available;
+  /* min-height: -webkit-fill-available; */
 
   display: block;
   overflow-x: hidden;
@@ -826,6 +826,7 @@ body.port-on.project-on .port-section {
     font-size: 1.025rem;
   }
   body.port-on .port-section {
-    padding-bottom: 10vh;
+    padding-bottom: 100px;
+    background: Red;
   }
 }
