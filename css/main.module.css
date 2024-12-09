@@ -12,6 +12,15 @@
   font-weight: normal;
   font-style: normal;
 }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+html {
+  -ms-content-zooming: none;
+  -ms-touch-action: pan-x pan-y;
+}
 
 body {
   font-family: "DepartureMono-Regular";
@@ -822,6 +831,6 @@ body.port-on.project-on .port-section {
     font-size: 1.025rem;
   }
   body.port-on .port-section {
-    background: green;
+    background: blue;
   }
 }
