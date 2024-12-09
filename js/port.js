@@ -17,7 +17,7 @@ const importData = () => {
     </div>`;
   });
   project.data.map((data) => {
-    const list = document.querySelector(".port-section .container .row");
+    const list = document.querySelector(".port-section .container .projects");
     list.innerHTML += `<div class="project col-md-6 col-lg-4">
     <div class="img-box" data-list="${data.id}"><img src="${data.image}"/>
     <p class="info" data-list="${data.id}">${data.info}<span class="blind">자세히보기</span></p></div>
@@ -134,29 +134,29 @@ function height() {
   });
 }
 height();
-function touch() {
-  document.documentElement.addEventListener(
-    "touchstart",
-    function (event) {
-      if (event.touches.length > 1) {
-        event.preventDefault();
-      }
-    },
-    false
-  );
+// function touch() {
+//   document.documentElement.addEventListener(
+//     "touchstart",
+//     function (event) {
+//       if (event.touches.length > 1) {
+//         event.preventDefault();
+//       }
+//     },
+//     false
+//   );
 
-  let lastTouchEnd = 0;
+//   let lastTouchEnd = 0;
 
-  document.documentElement.addEventListener(
-    "touchend",
-    function (event) {
-      let now = new Date().getTime();
-      if (now - lastTouchEnd <= 300) {
-        event.preventDefault();
-      }
-      lastTouchEnd = now;
-    },
-    false
-  );
-}
-touch();
+//   document.documentElement.addEventListener(
+//     "touchend",
+//     function (event) {
+//       let now = new Date().getTime();
+//       if (now - lastTouchEnd <= 300) {
+//         event.preventDefault();
+//       }
+//       lastTouchEnd = now;
+//     },
+//     false
+//   );
+// }
+// touch();

@@ -261,6 +261,7 @@ body.practice-on .hero-section {
   width: 100%;
   display: block;
   overflow: hidden;
+  overflow-y: auto;
   height: 100vh;
   /* height: var(--app-height); */
   /* min-height: -webkit-fill-available; */
@@ -822,6 +823,10 @@ body.port-on.project-on .port-section {
   }
 }
 @media (max-width: 480px) {
+  .about-section img {
+    min-width: 30%;
+    min-height: 30%;
+  }
   .about-section h3 {
     font-size: 1.125rem;
   }
@@ -830,7 +835,8 @@ body.port-on.project-on .port-section {
   .about-section ul + p {
     font-size: 1.025rem;
   }
-  body.port-on .port-section {
-    background: blue;
+  .practice-section .container .projects,
+  .port-section .container .projects {
+    padding-bottom: 4vh;
   }
 }
