@@ -268,7 +268,6 @@ body.practice-on .hero-section {
   width: 100%;
   display: block;
   overflow: hidden;
-  overflow-y: auto;
   height: 100vh;
   /* height: var(--app-height); */
   /* min-height: -webkit-fill-available; */
@@ -428,13 +427,52 @@ body.contact-on .contact-section {
 }
 .contact-section p {
   margin: 0 auto;
-  font-size: 32px;
+  font-size: 2.125rem;
   font-weight: 900;
   letter-spacing: 1px;
   color: #fff;
   display: inline-block;
   font-family: "Ownglyph_ryuttung-Rg";
   line-height: 1.2;
+}
+.contact-section p > span {
+  display: block;
+  opacity: 0;
+}
+.contact-section p > .front-icon {
+  font-size: 10rem;
+  width: 100%;
+  text-align: center;
+}
+.contact-section .selec {
+  -webkit-animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1);
+  animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1);
+  opacity: 1;
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .contact-section .social a {
   margin-left: 8px;
@@ -856,5 +894,11 @@ body.port-on.project-on .port-section {
     height: calc(100vh - 180px);
     overflow-y: auto;
     padding: 0 8vw 4vh 8vw;
+  }
+  .contact-section p {
+    font-size: 1.425rem;
+  }
+  .contact-section p > .front-icon {
+    font-size: 5rem;
   }
 }

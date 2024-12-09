@@ -124,13 +124,55 @@ const About = () => {
 };
 About(about);
 
-function height() {
-  window.addEventListener("DOMContentLoaded", function (ev) {
-    const { innerHeight } = window;
-    document.documentElement.style.setProperty(
-      "--app-height",
-      `${innerHeight}px`
-    );
+// function height() {
+//   window.addEventListener("DOMContentLoaded", function (ev) {
+//     const { innerHeight } = window;
+//     document.documentElement.style.setProperty(
+//       "--app-height",
+//       `${innerHeight}px`
+//     );
+//   });
+// }
+// height();
+function addClass() {
+  let no = 1;
+  let intervalId;
+  //intervalID 는 양의 정수로써 setInterval() 이 생성한 타이머를 식별할 때 사용 0부터 시작하지 않는다.
+  const fun = () => {
+    const targetSelector = `.contact-section .hover-target span:nth-child(${no})`;
+
+    console.log(`Selector: ${targetSelector}`);
+    const element = document.querySelector(targetSelector);
+    if (element) {
+      element.classList.add("selec");
+    }
+    // Increment and loop no
+    no = no + 1;
+    const totalSpans = document.querySelectorAll(
+      ".contact-section .hover-target span"
+    ).length;
+    if (no > totalSpans) {
+      no = 0;
+      clearInterval(intervalId);
+      console.log(intervalId);
+    }
+  };
+  intervalId = setInterval(fun, 500);
+}
+// addClass();
+function contactClass() {
+  const contact = document.querySelector(".contact-text");
+  const contact_close = document.querySelector(".contact-close");
+  contact.addEventListener("click", function () {
+    addClass();
+    contact_close.addEventListener("click", function () {
+      const Spans = document.querySelectorAll(
+        ".contact-section .hover-target span"
+      );
+      Spans.forEach((span) => {
+        span.classList.remove("selec");
+      });
+    });
   });
 }
-height();
+contactClass();
