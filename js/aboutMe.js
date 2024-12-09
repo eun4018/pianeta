@@ -22,9 +22,12 @@ const about = {
     },
   ],
   skill: [
-    { name: "web", txt: "웹 표준, 반응형 웹, 웹 접근성, SEO" },
+    { name: "web", txt: "웹 표준, 반응형 웹, 웹 접근성" },
     { name: "Languages", txt: "HTML5, CSS3, Sass(Scss), JavaScript" },
-    { name: "Framework & Library", txt: "Vuejs, wordpress, Bootstrap, Jquery" },
+    {
+      name: "Framework & Library",
+      txt: "React, Vue, wordpress, Bootstrap, Jquery",
+    },
     { name: "Design Tool", txt: "Photoshop, illustrator, XD, Zeplin, Figma" },
   ],
 };
