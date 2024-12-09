@@ -109,8 +109,8 @@ const modals = {
       link: "https://eun4018.github.io/react-house/",
       link01: "",
       link02: "https://github.com/eun4018/react-house",
-      image_pc: "img/prac_mockup03_pc-min.png",
-      image_mo: "img/prac_mockup03_mob-min.png",
+      image_pc: "img/prac_mockup03_pc.png",
+      image_mo: "img/prac_mockup03_mob.png",
     },
     {
       number: "prac03",
