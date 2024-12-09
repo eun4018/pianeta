@@ -111,13 +111,13 @@ importData(project);
 importModal(modals);
 
 const About = () => {
-  about.intro.map((intro) => {
-    const sec_parent = document.querySelector(".about-section .about ul");
-    sec_parent.innerHTML += `<li>${intro.txt}</li>`;
-  });
-  const intro_txt = document.createElement("p");
-  document.querySelector(".about-section .about").append(intro_txt);
-  intro_txt.innerHTML += `🌻 상단의 경험 이외에도 자신의 능력을 힘껏 불태우고 모자른 부분은 노력으로 채워가는 퍼블리셔`;
+  // about.intro.map((intro) => {
+  //   const sec_parent = document.querySelector(".about-section .about ul");
+  //   sec_parent.innerHTML += `<li>${intro.txt}</li>`;
+  // });
+  // const intro_txt = document.createElement("p");
+  // document.querySelector(".about-section .about").append(intro_txt);
+  // intro_txt.innerHTML += `🌻 상단의 경험 이외에도 자신의 능력을 힘껏 불태우고 모자른 부분은 노력으로 채워가는 퍼블리셔`;
   about.work.map((work) => {
     const sec_parent = document.querySelector(".about-section .works ul");
     sec_parent.innerHTML += `<li><p><span>${work.date}</span><span>${work.name} - ${work.txt}</span></p></li>`;
