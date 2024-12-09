@@ -838,5 +838,10 @@ body.port-on.project-on .port-section {
   .practice-section .container .projects,
   .port-section .container .projects {
     padding-bottom: 4vh;
+    height: calc(100vh - 180px);
+    overflow-y: scroll;
+  }
+  body {
+    background: Red;
   }
 }
