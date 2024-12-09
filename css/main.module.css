@@ -438,7 +438,6 @@ body.contact-on .contact-section {
   height: 100vh;
   /* height: var(--app-height); */
   /* min-height: -webkit-fill-available; */
-
   display: block;
   overflow-x: hidden;
   overflow-y: auto;
@@ -783,9 +782,6 @@ body.port-on.project-on .port-section {
   .about-section ul li > p {
     flex-direction: column;
   }
-  .about-section {
-    overflow-y: auto;
-  }
   #myModal.modal-on .modal-content {
     max-width: 95vw;
   }
@@ -826,7 +822,6 @@ body.port-on.project-on .port-section {
     font-size: 1.025rem;
   }
   body.port-on .port-section {
-    padding-bottom: 100px;
-    background: Red;
+    background: green;
   }
 }

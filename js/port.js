@@ -5,7 +5,9 @@ import about from "./aboutMe.js";
 
 const importData = () => {
   project.data01.map((data01) => {
-    const list01 = document.querySelector(".practice-section .container .row");
+    const list01 = document.querySelector(
+      ".practice-section .container .projects"
+    );
     list01.innerHTML += `<div class="project col-md-6 col-lg-4">
           <div class="img-box" data-list="${data01.number}">
             <img src="${data01.image}"/>
@@ -111,13 +113,6 @@ importData(project);
 importModal(modals);
 
 const About = () => {
-  // about.intro.map((intro) => {
-  //   const sec_parent = document.querySelector(".about-section .about ul");
-  //   sec_parent.innerHTML += `<li>${intro.txt}</li>`;
-  // });
-  // const intro_txt = document.createElement("p");
-  // document.querySelector(".about-section .about").append(intro_txt);
-  // intro_txt.innerHTML += `🌻 상단의 경험 이외에도 자신의 능력을 힘껏 불태우고 모자른 부분은 노력으로 채워가는 퍼블리셔`;
   about.work.map((work) => {
     const sec_parent = document.querySelector(".about-section .works ul");
     sec_parent.innerHTML += `<li><p><span>${work.date}</span><span>${work.name} - ${work.txt}</span></p></li>`;
@@ -129,13 +124,39 @@ const About = () => {
 };
 About(about);
 
-// function height() {
-//   window.addEventListener("DOMContentLoaded", function (ev) {
-//     const { innerHeight } = window;
-//     document.documentElement.style.setProperty(
-//       "--app-height",
-//       `${innerHeight}px`
-//     );
-//   });
-// }
-// height();
+function height() {
+  window.addEventListener("DOMContentLoaded", function (ev) {
+    const { innerHeight } = window;
+    document.documentElement.style.setProperty(
+      "--app-height",
+      `${innerHeight}px`
+    );
+  });
+}
+height();
+function touch() {
+  document.documentElement.addEventListener(
+    "touchstart",
+    function (event) {
+      if (event.touches.length > 1) {
+        event.preventDefault();
+      }
+    },
+    false
+  );
+
+  let lastTouchEnd = 0;
+
+  document.documentElement.addEventListener(
+    "touchend",
+    function (event) {
+      let now = new Date().getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    },
+    false
+  );
+}
+touch();
