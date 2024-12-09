@@ -821,4 +821,8 @@ body.port-on.project-on .port-section {
   .about-section ul + p {
     font-size: 1.025rem;
   }
+  .practice-section .project:last-child,
+  .port-section .project:last-child {
+    padding-bottom: 30px;
+  }
 }
