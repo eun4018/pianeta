@@ -25,7 +25,7 @@ const about = {
     { name: "Languages", txt: "HTML5, CSS3, Sass(Scss), JavaScript" },
     {
       name: "Framework & Library",
-      txt: "React, Vue, wordpress, Bootstrap, Jquery",
+      txt: "ReactJs, VueJs, wordpress, Bootstrap, Jquery",
     },
     { name: "Design Tool", txt: "Photoshop, illustrator, XD, Zeplin, Figma" },
   ],
